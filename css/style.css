@@ -51,6 +51,7 @@ a{
 }
 #hd > div{
     padding-top:20px;
+    position: relative;
 }
 #gnb > li >a{
     text-align: center;
@@ -58,12 +59,15 @@ a{
     font-size: 18px;
     line-height:50px;
     width:150px;
+    padding-bottom:30px;
+    transform: translateY(17px);
 }
 #gnb ul{
     overflow: hidden;
     height:0;
     text-align: center;
     transition: height 1s;
+    z-index:10;
 }
 #gnb ul li{
     line-height:50px;
@@ -83,4 +87,17 @@ a{
 }
 #gnb > li:hover > a{
     background-color: #0066ad;
+}
+#gnb:after{
+    content:"";
+    display:block;
+    position: absolute;
+    top:100%;
+    left:0;
+    width:1200px;
+    height:0;
+    transition:height 0.5s;
+}
+.aniSlide{
+    width:10000000px;
 }
