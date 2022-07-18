@@ -88,16 +88,27 @@ a{
 #gnb > li:hover > a{
     background-color: #0066ad;
 }
-#gnb:after{
-    content:"";
-    display:block;
-    position: absolute;
+#gnb  ul{
+    background-color:red;
     top:100%;
     left:0;
-    width:1200px;
+    right:0;
+    line-height: 2.5;
+    text-align: center;
     height:0;
-    transition:height 0.5s;
+    overflow: hidden;
+    transition: height 0.5s;
+    z-index: 10; /*중요*/
 }
-.aniSlide{
-    width:10000000px;
+.aniSlide > div{
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    opacity:0;
+    transition: 0.4s;
+}
+.aniSlide > div.on{
+    opacity: 1;
+    z-index:10;
 }
