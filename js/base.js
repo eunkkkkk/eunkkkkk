@@ -16,4 +16,8 @@ $(document).ready(function(){
         targetdiv %= 3;
         $('.aniSlide > div').eq(targetdiv).addClass('on').siblings().removeClass('on')
     }, 3000)
+
+    $('.tab h3').click(function(){
+        $(this).parent().addClass('on').siblings().removeClass('on')
+    })
 })

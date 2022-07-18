@@ -24,6 +24,9 @@ a{
 .align-items-center{
     align-items: center;
 }
+.align-items-start{
+    align-items: flex-start;
+}
 .abs{
     position: absolute;
 }
@@ -48,6 +51,10 @@ a{
 }
 .w1200{
     width: 1200px;
+}
+#hd{
+    position: relative;
+    z-index:100;
 }
 #hd > div{
     padding-top:20px;
@@ -89,7 +96,6 @@ a{
     background-color: #0066ad;
 }
 #gnb  ul{
-    background-color:red;
     top:100%;
     left:0;
     right:0;
@@ -99,6 +105,9 @@ a{
     overflow: hidden;
     transition: height 0.5s;
     z-index: 10; /*중요*/
+}
+#slideBox{
+    margin-bottom: 15px;
 }
 .aniSlide > div{
     left:0;
@@ -111,4 +120,41 @@ a{
 .aniSlide > div.on{
     opacity: 1;
     z-index:10;
+}
+.tab ul{
+    display:none;
+    width:calc(400px - 20px);
+}
+.on ul{
+    display:flex;
+}
+#gallery img{
+    width:calc(100% - 15px);
+    margin:auto;
+    display:block;
+}
+#gallery ul{
+    margin-left: -100%;
+}
+.tab h3{
+    font-size: 2em;
+}
+.tab > div{
+    width:50%;
+}
+#banners > div{
+    width:33.333%;
+}
+#banners > div:not(.tab) img{
+    width:calc(100% - 30px);
+    margin:auto;
+    display:block;
+}
+#notice li{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#notice ul{
+    flex-direction: column;
 }
